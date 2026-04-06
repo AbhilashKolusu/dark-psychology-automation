@@ -55,9 +55,49 @@ Output requirements (JSON format):
 
 ## Setup
 
-1. Install dependencies: `pip install -r requirements.txt`
-2. Configure API keys in `config.py`
-3. Run the automation script: `python main.py`
+1. **Clone and navigate to the project**:
+   ```bash
+   cd /Users/_ak/Workspace_Personal/dark-psychology-automation
+   ```
+
+2. **Install dependencies** (creates virtual environment automatically):
+   ```bash
+   make install
+   ```
+
+3. **Configure API keys**:
+   ```bash
+   make setup
+   # Then edit .env file with your actual API keys
+   ```
+
+4. **Activate the virtual environment** (for manual commands):
+   ```bash
+   source venv/bin/activate
+   ```
+
+5. **Run the automation**:
+   ```bash
+   make run
+   ```
+
+## Manual Commands
+
+If you prefer to run commands manually:
+
+```bash
+# Create virtual environment
+python3 -m venv venv
+
+# Activate it
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the script
+python main.py
+```
 
 ## Disclaimer
 
