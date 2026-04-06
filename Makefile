@@ -1,4 +1,4 @@
-.PHONY: install setup run clean test activate
+.PHONY: install setup run clean test activate validate
 
 install:
 	python3 -m venv venv
@@ -6,13 +6,16 @@ install:
 
 setup:
 	cp .env.example .env
-	@echo "Please edit .env file with your API keys"
+	@echo "Please edit .env file with your API keys and social media accounts"
 
 activate:
 	@echo "Run: source venv/bin/activate"
 
 run:
 	source venv/bin/activate && python main.py
+
+validate:
+	source venv/bin/activate && python validate_config.py
 
 clean:
 	rm -f content_*.json
