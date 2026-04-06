@@ -1,23 +1,33 @@
 # Configuration file for Dark Psychology Automation
-# Copy this to config.py and fill in your API keys
+# This file loads settings from environment variables
 
-# OpenAI API Key
-OPENAI_API_KEY = "your-openai-api-key-here"
+import os
+from dotenv import load_dotenv
 
-# ElevenLabs API Key (for voice generation)
-ELEVENLABS_API_KEY = "your-elevenlabs-api-key-here"
+# Load environment variables from .env file
+load_dotenv()
 
-# Midjourney API Key (if using API access)
-MIDJOURNEY_API_KEY = "your-midjourney-api-key-here"
+# AI Service APIs
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+ELEVENLABS_API_KEY = os.getenv('ELEVENLABS_API_KEY')
+MIDJOURNEY_API_KEY = os.getenv('MIDJOURNEY_API_KEY')
 
-# Ayrshare API Key (for social media posting)
-AYRSHARE_API_KEY = "your-ayrshare-api-key-here"
+# Social Media Posting API
+AYRSHARE_API_KEY = os.getenv('AYRSHARE_API_KEY')
 
-# Other settings
+# Social Media Account Details
+INSTAGRAM_USERNAME = os.getenv('INSTAGRAM_USERNAME')
+TIKTOK_USERNAME = os.getenv('TIKTOK_USERNAME')
+YOUTUBE_CHANNEL_ID = os.getenv('YOUTUBE_CHANNEL_ID')
+
+# Channel Settings
+CHANNEL_NAME = os.getenv('CHANNEL_NAME', 'The Dark Codex')
+
+# Voice Settings
 VOICE_MODEL = "eleven_monolingual_v1"
-VOICE_ID = "your-voice-id"  # Get from ElevenLabs dashboard
+VOICE_ID = os.getenv('VOICE_ID')  # Get from ElevenLabs dashboard
 
-# Content settings
-VIDEO_LENGTH_SECONDS = 50
-HOOK_LENGTH_SECONDS = 3
-SCRIPT_LENGTH_SECONDS = 45
+# Content Settings
+VIDEO_LENGTH_SECONDS = int(os.getenv('VIDEO_LENGTH_SECONDS', 50))
+HOOK_LENGTH_SECONDS = int(os.getenv('HOOK_LENGTH_SECONDS', 3))
+SCRIPT_LENGTH_SECONDS = int(os.getenv('SCRIPT_LENGTH_SECONDS', 45))

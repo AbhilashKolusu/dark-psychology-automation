@@ -65,11 +65,23 @@ Output requirements (JSON format):
    make install
    ```
 
-3. **Configure API keys**:
+3. **Configure API keys and social media accounts**:
    ```bash
    make setup
-   # Then edit .env file with your actual API keys
+   # Then edit .env file with your actual API keys and account details
    ```
+
+   **Required API Keys:**
+   - `OPENAI_API_KEY`: Get from https://platform.openai.com/api-keys
+   - `ELEVENLABS_API_KEY`: Get from https://elevenlabs.io/app/profile
+   - `MIDJOURNEY_API_KEY`: Get from Midjourney API (if using API access)
+   - `AYRSHARE_API_KEY`: Get from https://ayrshare.com (for social media posting)
+
+   **Social Media Account Details:**
+   - `INSTAGRAM_USERNAME`: Your Instagram handle (without @)
+   - `TIKTOK_USERNAME`: Your TikTok handle (without @)
+   - `YOUTUBE_CHANNEL_ID`: Your YouTube channel ID
+   - `CHANNEL_NAME`: Your brand name (default: "The Dark Codex")
 
 4. **Activate the virtual environment** (for manual commands):
    ```bash
