@@ -83,12 +83,18 @@ Output requirements (JSON format):
    - `YOUTUBE_CHANNEL_ID`: Your YouTube channel ID
    - `CHANNEL_NAME`: Your brand name (default: "The Dark Codex")
 
-4. **Activate the virtual environment** (for manual commands):
+4. **Validate your configuration**:
+   ```bash
+   make validate
+   # This will check if all required settings are configured
+   ```
+
+5. **Activate the virtual environment** (for manual commands):
    ```bash
    source venv/bin/activate
    ```
 
-5. **Run the automation**:
+6. **Run the automation**:
    ```bash
    make run
    ```
@@ -111,6 +117,12 @@ pip install -r requirements.txt
 python main.py
 ```
 
-## Disclaimer
+## How Social Media Accounts Are Used
 
-This system is for educational and entertainment purposes only. Dark psychology concepts should be studied responsibly and never used to harm others.
+The automation system uses your configured social media accounts in the following way:
+
+1. **Instagram & TikTok**: The `INSTAGRAM_USERNAME` and `TIKTOK_USERNAME` are used by Ayrshare API to post content to your specific accounts
+2. **YouTube**: The `YOUTUBE_CHANNEL_ID` identifies which channel to upload videos to
+3. **Channel Name**: Used in content generation and branding consistency across platforms
+
+**Important**: Make sure these accounts are connected to your Ayrshare account before running the full automation. You can connect social media accounts in your Ayrshare dashboard at https://app.ayrshare.com/
